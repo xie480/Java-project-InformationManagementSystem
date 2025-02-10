@@ -4,9 +4,9 @@ spring:
   #mysql连接配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/projecttest
-    username: root
-    password: XUWENBO219382
+    url: 
+    username: 
+    password: 
 
   servlet:
    multipart:
@@ -20,6 +20,6 @@ mybatis:
 
 aliyun:
   oss:
-    endpoint: https://oss-cn-beijing.aliyuncs.com
-    bucketName: yilena-practice-project
-    region: cn-beijing
+    endpoint: 
+    bucketName: 
+    region: 
