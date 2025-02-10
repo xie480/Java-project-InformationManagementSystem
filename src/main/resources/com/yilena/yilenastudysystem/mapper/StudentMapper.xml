@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilena.yilenastudysystem.mapper.StudentMapper">
+    <insert id="saveStudent">
+        insert into student(name, no, gender, phone, id_card, is_college, address, degree, graduation_date, clazz_id, violation_count, violation_score, create_time, update_time)
+        values (#{name}, #{no}, #{gender}, #{phone}, #{idCard}, #{isCollege}, #{address}, #{degree}, #{graduationDate}, #{clazzId}, #{violationCount}, #{violationScore}, now(), now())
+    </insert>
+    <update id="updateStudent">
+        update student s
+        <set>
+            <if test="name != null and name != ''">
+                s.name = #{name},
+            </if>
+            <if test="no != null and no != ''">
+                s.no = #{no},
+            </if>
+            <if test="gender != null">
+                s.gender = #{gender},
+            </if>
+            <if test="phone != null and phone != ''">
+                s.phone = #{phone},
+            </if>
+            <if test="idCard != null and idCard != ''">
+                s.id_card = #{idCard},
+            </if>
+            <if test="isCollege != null">
+                s.is_college = #{isCollege},
+            </if>
+            <if test="address != null">
+                s.address = #{address},
+            </if>
+            <if test="graduationDate != null">
+                s.graduation_date = #{graduationDate},
+            </if>
+            <if test="violationCount != null">
+                s.violation_count = #{violationCount},
+            </if>
+            <if test="violationScore != null">
+                s.violation_score = #{violationScore},
+            </if>
+            <if test="clazzId != null">
+                s.clazz_id = #{clazzId}
+            </if>
+        </set>
+        where s.id = #{id}
+    </update>
+    <update id="updateViolation">
+        update student
+        set violation_count = violation_count + 1,
+            violation_score = violation_score + #{score}
+        where id = #{id}
+    </update>
+    <delete id="deleteStudent">
+        delete from student where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="pageList" resultType="com.yilena.yilenastudysystem.pojo.Student">
+        select s.id, s.name,s.no, s.gender, s.phone,s.id_card as idCard,s.is_college as isCollege,s.address,s.degree,s.graduation_date as graduationDate, s.clazz_id as clazzId, s.violation_count as violationCount, s.violation_score as violationScore,s.create_time as createTime, s.update_time as updateTime, c.name clazzName, c.room, c.begin_date as beginDate, c.end_date as endDate
+        from student s
+        left join clazz c
+        on s.clazz_id = c.id
+        <where>
+            <if test="name != null and name != ''">
+                s.name like concat('%',#{name},'%')
+            </if>
+            <if test="degree != null">
+                and s.degree = #{degree}
+            </if>
+            <if test="clazzId != null">
+                and s.clazz_id = #{clazzId}
+            </if>
+        </where>
+    </select>
+    <select id="findById" resultType="com.yilena.yilenastudysystem.pojo.Student">
+        select id, name, no, gender, phone, id_card as idCard, is_college as isCollege, address, degree, graduation_date as graduationDate, clazz_id as clazzId, violation_count as violationCount, violation_score as violationScore, create_time as createTime, update_time as updateTime
+        from student
+        where id = #{id}
+    </select>
+    <select id="findDegree" resultType="java.util.Map">
+        select
+            case degree
+                when 1 then '初中'
+                when 2 then '高中'
+                when 3 then '大专'
+                when 4 then '本科'
+                when 5 then '硕士'
+                when 6 then '博士'
+                else '其他'
+            end as degree, count(degree) as degreeCount
+        from student
+        group by degree
+    </select>
+    <select id="findCount" resultType="java.util.Map">
+        select c.name as clazzName, count(s.clazz_id) as count
+        from student s
+        left join clazz c
+        on s.clazz_id = c.id
+        group by s.clazz_id
+    </select>
+</mapper>

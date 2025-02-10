@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilena.yilenastudysystem.mapper.ClazzMapper">
+
+    <select id="pageList">
+        select c.id, c.name, c.room, c.begin_date as beginDate, c.end_date as endDate, c.master_id as masterId, c.subject, c.create_time as createTime, c.update_time as updateTime, e.name masterName
+        from clazz c
+        left join emp e
+        on c.master_id = e.id
+    </select>
+    <insert id="saveClazz">
+        insert into clazz(name, room, begin_date, end_date, master_id, subject, create_time, update_time)
+        values (#{name}, #{room}, #{beginDate}, #{endDate}, #{masterId}, #{subject}, now(), now())
+    </insert>
+    <update id="updateClazz">
+        update clazz
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="room != null and room != ''">
+                room = #{room},
+            </if>
+            <if test="beginDate != null">
+                begin_date = #{beginDate},
+            </if>
+            <if test="endDate != null">
+                end_date = #{endDate},
+            </if>
+            <if test="masterId != null">
+                master_id = #{masterId},
+            </if>
+            <if test="subject != null">
+                subject = #{subject},
+            </if>
+            update_time = now()
+        </set>
+        where id = #{id}
+    </update>
+    <delete id="deleteClazz">
+        delete from clazz where id = #{id}
+    </delete>
+    <select id="findById" resultType="com.yilena.yilenastudysystem.pojo.Clazz">
+        select c.id, c.name, c.room, c.begin_date as beginDate, c.end_date as endDate, c.master_id as masterId, c.subject, c.create_time as createTime, c.update_time as updateTime, e.name masterName
+        from clazz c
+        left join emp e
+        on c.master_id = e.id
+        where c.id = #{id}
+    </select>
+    <select id="findAll" resultType="com.yilena.yilenastudysystem.pojo.Clazz">
+        select c.id, c.name, c.room, c.begin_date as beginDate, c.end_date as endDate, c.master_id as masterId, c.subject, c.create_time as createTime, c.update_time as updateTime, e.name masterName
+        from clazz c
+        left join emp e
+        on c.master_id = e.id
+    </select>
+</mapper>

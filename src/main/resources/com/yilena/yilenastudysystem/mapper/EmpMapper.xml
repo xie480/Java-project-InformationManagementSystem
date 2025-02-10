@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yilena.yilenastudysystem.mapper.EmpMapper">
+    <update id="updateEmp">
+        update emp
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="job != null and job != ''">
+                job = #{job},
+            </if>
+            <if test="salary != null">
+                salary = #{salary},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+            <if test="enterDate != null">
+                enter_date = #{enterDate},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId},
+            </if>
+            update_time = now()
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteEmp">
+        delete from emp where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="list" resultType="com.yilena.yilenastudysystem.pojo.Emp">
+        select e.id, e.username, e.password, e.name, e.gender, e.phone, e.job, e.salary, e.image, e.enter_date as enterDate, e.dept_id as deptId, e.create_time as createTime, e.update_time as updateTime, d.name deptName from emp as e left join dept as d on e.dept_id = d.id
+        <where>
+            <if test="name != null and name != ''">
+                e.name like concat('%',#{name},'%')
+            </if>
+            <if test="gender != null">
+                and e.gender = #{gender}
+            </if>
+            <if test="begin != null and end != null">
+                and e.enter_date between #{begin} and #{end}
+            </if>
+        </where>
+    </select>
+
+    <select id="findById" resultType="com.yilena.yilenastudysystem.pojo.Emp">
+        select e.id, e.username, e.password, e.name, e.gender, e.phone, e.job, e.salary, e.image, e.enter_date as enterDate, e.dept_id as deptId,e.create_time as createTime,e.update_time as updateTime, d.name deptName
+        from emp e
+        left join dept d
+        on e.dept_id = d.id
+        where e.id = #{id}
+    </select>
+    <select id="findGender" resultType="java.util.Map">
+        select
+            case gender
+             when 1 then '男'
+             when 2 then '女'
+            end as gender, count(*) as count from emp group by gender
+    </select>
+    <select id="findJob" resultType="java.util.Map">
+        select
+            case job
+                when 1 then '讲师'
+                when 2 then '助教'
+                when 3 then '班主任'
+                when 4 then '就业指导'
+                when 5 then '行政'
+                else '其他'
+            end as job, count(*) as count from emp group by job
+    </select>
+</mapper>

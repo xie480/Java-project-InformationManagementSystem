@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84a64a6e-b7b2-46fc-8cc7-cc337b0fd370" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/Filter/YSSFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/Interceptor/YSSInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/YilenaStudySystemApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/aop/OperationLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/ClazzController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/DeptController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/EmpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/OperateLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/ReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/controller/UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/exception/MyCustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/log/LogOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/mapper/ClazzMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/mapper/EmpExprMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/mapper/EmpMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/mapper/OperateLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/mapper/StudentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/Clazz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/ClazzQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/Dept.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/Emp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/EmpExpr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/EmpQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/LoginInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/OperateLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/PageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/pojo/StudentQueryParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/ClazzService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/DeptService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/EmpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/OperateLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/impl/ClazzServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/impl/DeptServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/impl/EmpServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/impl/OperateLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/utils/AliyunOSSProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/utils/CurrentHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yilena/yilenastudysystem/webConfig/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/yilena/yilenastudysystem/mapper/ClazzMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/yilena/yilenastudysystem/mapper/EmpExprMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/yilena/yilenastudysystem/mapper/EmpMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/yilena/yilenastudysystem/mapper/StudentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yilena/yilenastudysystem/YilenaStudySystemApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\apache-maven-3.9.9-bin\apache-maven-3.9.9\repo" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="23" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2sOEyMJxR2vgFkknXgx5J5aFZrP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Maven.YilenaStudySystem [clean].executor": "Run",
+    "Maven.YilenaStudySystem [compile].executor": "Run",
+    "Maven.YilenaStudySystem [package].executor": "Run",
+    "Maven.YilenaStudySystem [test].executor": "Run",
+    "Maven.YilenaStudySystem [validate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.YilenaStudySystemApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/YilenaCode/Project of Yliena/YSS-Main-Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "xml.catalog",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\YilenaCode\Project of Yliena\YilenaStudySystem\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="YilenaStudySystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="YSS-main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yilena.yilenastudysystem.YilenaStudySystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="84a64a6e-b7b2-46fc-8cc7-cc337b0fd370" name="更改" comment="" />
+      <created>1737118325182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737118325182</updated>
+      <workItem from="1737118326440" duration="83000" />
+      <workItem from="1738318476082" duration="15255000" />
+      <workItem from="1738376329779" duration="31787000" />
+      <workItem from="1738421306108" duration="611000" />
+      <workItem from="1739168202690" duration="1205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

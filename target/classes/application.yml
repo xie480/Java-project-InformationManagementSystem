@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: YYS-PROJECT-MAIN
+  #mysql连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/projecttest
+    username: root
+    password: XUWENBO219382
+
+  servlet:
+   multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    bucketName: yilena-practice-project
+    region: cn-beijing
