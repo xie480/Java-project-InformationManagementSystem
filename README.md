@@ -1,35 +1,49 @@
-# vue-tlias-management
+#####
+这是本人第一个项目，所以会有很多不足之处
 
-This template should help get you started developing with Vue 3 in Vite.
+#仓库说明
+main分支为前端代码，back-end为后端代码
 
-## Recommended IDE Setup
+#功能说明
+（一）导航控制模块
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+采用多层级导航菜单设计，左侧导航栏基于RBAC权限模型实现模块化功能分区，包含多个管理模块，如班级学员管理、班级管理、学员管理、系统信息管理、信息统计管理和后台日志管理。
 
-## Customize configuration
+（二）用户会话管理
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+全局视图右上角集成用户状态面板，实时显示当前会话的认证信息
 
-## Project Setup
+提供修改密码功能
 
-```sh
-npm install
-```
+采用JWT令牌实现无状态退出机制
 
-### Compile and Hot-Reload for Development
+（三）数据管理
 
-```sh
-npm run dev
-```
+1.基础数据管理
 
-### Compile and Minify for Production
+实现教学班级、学员档案、部门架构、教职工信息四个核心数据域的CRUD操作
 
-```sh
-npm run build
-```
+采用MyBatis动态SQL构建多条件复合查询引擎
 
-### Lint with [ESLint](https://eslint.org/)
+分页机制基于PageHelper实现物理分页优化
 
-```sh
-npm run lint
-```
+2.增强型功能设计
+
+海量数据处理方案：
+
+实现批量删除的批处理优化
+
+学员行为管理系统：
+
+违纪事件记录模块支持扣分规则配置
+
+实时更新学员综合评估指标
+
+（四）可视化数据图表
+
+采用ECharts实现动态可视化图表引擎以便直观地展示数据，方便查询以及后续的业务需求。
+
+（五）操作审计模块
+
+基于Spring AOP实现全量操作日志采集，支持有关添加、修改以及删除功能的日志记录数据的多条件联合查询的复合索引设计，方便平台的后台管理。
+
